@@ -1,0 +1,164 @@
+body {
+  background-image: url("/Assets/images/cardhub-bg.jpeg"); 
+  background-size: cover;
+}
+
+
+header {
+    color:rgb(0, 0, 0);
+    text-align: right;
+    padding-right: 5%;
+    padding-top: 10px;
+}
+
+header div h4 {
+  font-family: monospace;
+}
+
+header .container {
+    display: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.control-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+
+.column h4 {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    margin-top: 75px;
+    font-family: monospace;
+  }
+
+.column div {
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 25px;
+  }
+
+header img {
+    width: 200px;
+    height: 70px;
+    margin-left: 5%;;
+}
+
+header .flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header h4 {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+container row {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 700px 0;
+    background-color: rgba(128, 128, 128, 0.13);
+    border: .01px solid black;
+}
+
+input[type="text"] {
+background-color: rgba(126, 126, 126, 0);
+font-family: monospace;
+color:black;
+text-align: center;
+border-radius: none;
+}
+
+div select {
+    background-color: rgba(126, 126, 126, 0);
+    font-family: monospace;
+    border: none;
+    padding-right:-20px;
+}
+
+div select option[value="1"] {
+  font-family:'Times New Roman', Times, serif;
+}
+
+  div select option[value="2"] {
+    font-family:'georgia', serif;
+  }
+
+  div select option[value="3"] {
+    font-family:'garmond', serif;
+  }
+
+  div select option[value="4"] {
+    font-family:'Arial', sans-serif;
+  }
+
+  div select option[value="5"] {
+    font-family:'verdana', sans-serif;
+  }
+
+  div select option[value="6"] {
+    font-family:'helvetica', sans-serif;
+  }
+
+  div select option[value="7"] {
+    font-family:'Courier New', monospace;
+  }
+
+  div select option[value="8"] {
+    font-family:'luceida console', monospace;
+  }
+
+  div select option[value="9"] {
+    font-family:'Monaco', monospace;
+  }
+
+  div select option[value="10"] {
+    font-family: monospace;
+    font-size: small;
+  }
+
+  div select option[value="11"] {
+    font-family:monospace;
+    font-size: medium;
+  }
+
+  div select option[value="12"] {
+    font-family:monospace;
+    font-size: large;
+  }
+
+  div select option[value="13"] {
+    font-family:monospace;
+    font-size: x-large;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
