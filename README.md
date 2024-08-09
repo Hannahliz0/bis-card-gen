@@ -27,6 +27,6 @@
 
 ## Credits
 
-Hannah Schmidt - Hannahliz0
-Amauri Brown - Amauri817
-Amar Patel - pamar123
+- Hannah Schmidt: GitHub - Hannahliz0
+- Amauri Brown: GitHub - Amauri817
+- Amar Patel: GitHub - pamar123
