@@ -32,31 +32,40 @@
         <!-- Left -->
         <div class="left">
             <section>
-                <h1 id="prev">Preview</h1>
+                <h4 id="prev">Preview</h>
                 <!-- class to generate the card -->
                 <div class="card">
-                    Generate card
+                    Front
                 </div>
-                <div class="bottom">
-                    <button>Small</button>
-                    <button>Medium</button>
-                    <button>Large</button>
+                <div class="card">
+                    Back
                 </div>
+                <!-- <div class="bottom">
+                    <button class="btn btn-outline-light">Small</button>
+                    <button class="btn btn-outline-light"> Medium </button>
+                    <button class="btn btn-outline-light">Large</button>
+                </div> -->
             </section>
         </div>
 
         <!-- Middle -->
         <div class="column middle-column d-flex flex-column align-items-center">
             <div class="control-section mb-3">
-                <h4>Font Color</h4>
+                <h3>Font Color</h3>
                 <input id="font-color-picker" type="color">
             </div>
             <div class="control-section mb-3">
-                <h4>Card Color</h4>
+                <h3>Card Color</h3>
                 <input id="card-color-picker" type="color">
             </div>
+
+            <div class="card-shape-control">
+                <h3>Card Shape</h3>
+                <button class="btn btn-outline-light">Square</button>
+                <button class="btn btn-outline-light">Rounded</button>
+            </div>
             <div class="control-section mb-3">
-                <h4>Upload Logo</h4>
+                <h3>Upload Logo</h3>
                 <input type="file" id="logo-upload" accept="image/*">
             </div>
         </div>
@@ -242,8 +251,9 @@
                 </div> <!-- end row -->
             </form>
             <div class="button-group">
-                <button class="btn btn-secondary">History</button>
-                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-outline-light">History</button>
+                <button class="btn btn-outline-light">Save</button>
+              
             </div>
         </div>
     </main>
