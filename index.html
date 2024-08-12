@@ -35,7 +35,13 @@
                 <h1 id="prev">Preview</h1>
                 <!-- class to generate the card -->
                 <div class="card">
-                    Generate card
+                    Front card
+                </div>
+                <div>
+                    
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button>card border</button>
                 </div>
                 <div class="bottom">
                     <button>Small</button>
@@ -67,7 +73,7 @@
             <form>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Full Name">
+                        <input type="text" id="name" placeholder="Full Name">
                     </div>
 
                     <div class="col-md-3">
@@ -96,7 +102,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Title" aria-label="title">
+                        <input type="text" id="title" placeholder="Title" aria-label="title">
                     </div>
 
                     <div class="col-md-3">
@@ -125,7 +131,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Website" aria-label="website">
+                        <input type="text" id="website" placeholder="Website" aria-label="website">
                     </div>
 
                     <div class="col-md-3">
@@ -154,36 +160,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Phone Number" aria-label="Number">
-                    </div>
-
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Font</option>
-                            <option value="1">Times New Roman</option>
-                            <option value="2">Georgia</option>
-                            <option value="3">Garamond</option>
-                            <option value="4">Arial</option>
-                            <option value="5">Verdana</option>
-                            <option value="6">Helvetica</option>
-                            <option value="7">Courier New</option>
-                            <option value="8">Lucida Console</option>
-                            <option value="9">Monaco</option>
-                        </select>
-                    </div>
-                
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
-                        </select>
-                    </div> 
-
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                        <input type="text" id="number" placeholder="Phone Number" aria-label="Number">
                     </div>
 
                     <div class="col-md-3">
@@ -212,7 +189,36 @@
                     </div> 
 
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Address" aria-label="Address">
+                        <input type="text" id="email" placeholder="Email" aria-label="Email">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Font</option>
+                            <option value="1">Times New Roman</option>
+                            <option value="2">Georgia</option>
+                            <option value="3">Garamond</option>
+                            <option value="4">Arial</option>
+                            <option value="5">Verdana</option>
+                            <option value="6">Helvetica</option>
+                            <option value="7">Courier New</option>
+                            <option value="8">Lucida Console</option>
+                            <option value="9">Monaco</option>
+                        </select>
+                    </div>
+                
+                    <div class="col-md-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Size</option>
+                            <option value="10">Small</option>
+                            <option value="11">Medium</option>
+                            <option value="12">Large</option>
+                            <option value="13">X-Large</option>
+                        </select>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <input type="text" id="address" placeholder="Address" aria-label="Address">
                     </div>
 
                     <div class="col-md-3">
@@ -240,17 +246,14 @@
                         </select>
                     </div>
                 </div> <!-- end row -->
+                <button id="historyBtn">History</button>
+                <button id="saveBtn">Save</button>
             </form>
-            <div class="button-group">
-                <button class="btn btn-secondary">History</button>
-                <button class="btn btn-primary">Save</button>
-            </div>
         </div>
     </main>
+    <script src="java.js"></script>
 </body>
-
-<footer>
-    
+<footer style="text-align: center;">
+    <h1>Fill in later</h1>
 </footer>
-
 </html>
