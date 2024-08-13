@@ -60,4 +60,4 @@ rectangleBtn.addEventListener('click', function () {
     frontCard.style.borderRadius = '0%';
     backCard.style.borderRadius = '0%';
     alert('worked')
-}
+});
