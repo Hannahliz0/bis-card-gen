@@ -137,9 +137,8 @@ input .btn {
   border-radius: 0 0 5px 5px;
   margin-top: 25px;
 }
+
 /* END OF MIDDLE COLUMN */
-
-
 
 
 /* RIGHT COLUMN */
@@ -160,8 +159,8 @@ input[type="text"] {
   font-family: monospace;
 }
 
-div select {
-  background-color: rgba(148, 43, 43, 0);
+div input[type="text"] {
+  background-color: rgba(126, 126, 126, 0);
   font-family: monospace;
   border: none;
   padding-right: -20px;
@@ -221,6 +220,12 @@ div select option[value="12"] {
 div select option[value="13"] {
   font-family: monospace;
   font-size: x-large;
+}
+
+.button-group {
+  display: flex;
+  justify-content:end;
+  margin-top: 20px;
 }
 /* END OF RIGHT COLUMN */
 

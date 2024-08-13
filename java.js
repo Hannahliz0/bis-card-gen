@@ -6,6 +6,10 @@ const emailInput = document.querySelector('#email');
 const addressInput = document.querySelector('#address');
 const saveBtnInput = document.querySelector('#saveBtn');
 const historyBtnInput = document.querySelector('#historyBtn');
+const roundBtn = document.querySelector('#RoundBtn');
+const rectangleBtn = document.querySelector('#RectangleBtn');
+const frontCard = document.querySelector('#frontCard');
+const backCard = document.querySelector('#backCard');
 
 saveBtnInput.addEventListener('click', function (event) {
   event.preventDefault();
@@ -69,3 +73,15 @@ historyBtnInput.addEventListener('click', function (event) {
         alert ('No History')
     }
 })
+
+roundBtn.addEventListener('click', function () {
+    frontCard.style.borderRadius = '50%';
+    backCard.style.borderRadius = '50%';
+    alert('worked')
+});
+
+rectangleBtn.addEventListener('click', function () {
+    frontCard.style.borderRadius = '0%';
+    backCard.style.borderRadius = '0%';
+    alert('worked')
+}
