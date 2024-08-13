@@ -9,7 +9,8 @@ const historyBtnInput = document.querySelector('#historyBtn');
 const roundBtn = document.querySelector('#roundBtn');
 const rectangleBtn = document.querySelector('#rectangleBtn');
 const leafBtn = document.querySelector('#leafBtn');
-const card = document.querySelector('#card');
+const frontCard = document.querySelector('#frontCard');
+const backCard = document.querySelector('#backCard');
 
 saveBtnInput.addEventListener('click', function (event) {
   event.preventDefault();
@@ -91,17 +92,25 @@ addressInput.addEventListener('input', function() {
     document.getElementById('previewAddress').textContent = this.value
 });
 
+
+
 roundBtn.addEventListener('click', function() {
-    card.style.borderRadius = '20%';
+    frontCard.style.borderRadius = '20%';
+    backCard.style.borderRadius = '20%';
 });
 
 rectangleBtn.addEventListener('click', function() {
-    card.style.borderRadius = '0%';
+    frontCard.style.borderRadius = '0%';
+    backCard.style.borderRadius = '0%';
 });
 
 leafBtn.addEventListener('click', function() {
-    card.style.borderTopLeftRadius = '0%';
-    card.style.borderBottomRightRadius = '0%';
-    card.style.borderTopRightRadius = '20%';
-    card.style.borderBottomLeftRadius = '20%';
+    frontCard.style.borderTopLeftRadius = '0%';
+    frontCard.style.borderBottomRightRadius = '0%';
+    frontCard.style.borderTopRightRadius = '20%';
+    frontCard.style.borderBottomLeftRadius = '20%';
+    backCard.style.borderTopLeftRadius = '0%';
+    backCard.style.borderBottomRightRadius = '0%';
+    backCard.style.borderTopRightRadius = '20%';
+    backCard.style.borderBottomLeftRadius = '20%';
 });

@@ -59,8 +59,6 @@ main {
 }
 
 
-
-
 .left {
   padding: 10px;
 }
@@ -268,6 +266,13 @@ input[type="color"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+footer h4 {
+  text-align: center;
+  padding: 10px;
+  font-family: monospace;
+  color: white;
 }
 
 
