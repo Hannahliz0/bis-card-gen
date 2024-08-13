@@ -23,10 +23,48 @@ saveBtnInput.addEventListener('click', function (event) {
     email: emailInput.value,
     address: addressInput.value,
   };
+
   // TODO: Set new submission to local storage
   localStorage.setItem('userInput', JSON.stringify(userInput));
 
   alert('worked')
+});
+
+historyBtnInput.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const username = nameInput.value;
+    document.getElementById('modalUsername').textContent = username;
+
+    const modTitle = titleInput.value
+    document.getElementById('modalTitle').textContent = modTitle;
+
+    const modWebsite = websiteInput.value
+    document.getElementById('modalWebsite').textContent = modWebsite;
+
+    const modNum = numberInput.value
+    document.getElementById('modalNumber').textContent = modNum;
+
+    const modEmail = emailInput.value
+    document.getElementById('modalEmail').textContent = modEmail;
+
+    const modAddress = addressInput.value
+    document.getElementById('modalAddress').textContent = modAddress;
+
+    const modal = document.getElementById('myModal');
+    modal.style.display = "block";
+})
+
+document.querySelector('.close').addEventListener('click', function() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = "none";
+});
+
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('myModal');
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
 });
 
 nameInput.addEventListener('input', function() {
@@ -52,27 +90,6 @@ emailInput.addEventListener('input', function() {
 addressInput.addEventListener('input', function() {
     document.getElementById('previewAddress').textContent = this.value
 });
-
-historyBtnInput.addEventListener('click', function (event) {
-    const display = localStorage.getItem('userInput')
-
-    if (display) {
-        const usersInput = JSON.parse(display);
-
-        const popupContent = `
-            <p><strong>Username:</strong> ${usersInput.name}</p>
-            <p><strong>Title:</strong> ${usersInput.title}</p>
-            <p><strong>Website:</strong> ${usersInput.website}</p>
-            <p><strong>Number:</strong> ${usersInput.number}</p>
-            <p><strong>Email:</strong> ${usersInput.email}</p>
-            <p><strong>Address:</strong> ${usersInput.address}</p>
-        `;
-        const popupWindow = window.open("", "Popup", "width=400,height=300");
-        popupWindow.document.write(`<html><head><title>History</title></head><body>${popupContent}</body></html>`);
-    } else {
-        alert ('No History')
-    }
-})
 
 roundBtn.addEventListener('click', function () {
     frontCard.style.borderRadius = '50%';

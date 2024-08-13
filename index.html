@@ -78,7 +78,7 @@
         <!-- Right -->
         <div class="column">
             <h4>Make Your Card Uniquely Yours!</h4>
-            <form>
+            <form id="userForm">
                 <div class="row g-3">
                     <div class="col-md-6">
                         <input class="form-control" type="text" id="name" placeholder="Full Name">
@@ -262,6 +262,20 @@
             </form>
         </div>
     </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Saved Data</h2>
+            <p><strong>Name:</strong> <span id="modalUsername"></span></p>
+            <p><strong>Title:</strong> <span id="modalTitle"></span></p>
+            <p><strong>Website:</strong> <span id="modalWebsite"></span></p>
+            <p><strong>Number:</strong> <span id="modalNumber"></span></p>
+            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+            <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+        </div>
+    </div>
+
     <script src="java.js"></script>
 </body>
 
