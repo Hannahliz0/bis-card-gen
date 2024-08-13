@@ -34,17 +34,17 @@
             <section>
                 <h4 id="prev">Preview</h>
                 <!-- class to generate the card -->
-                <div class="card">
-                    Generate card
+                <div class="card bis-card" id="card">
+                    <p>Name: <span id="previewName"></span></p>
+                    <p>Title: <span id="previewTitle"></span></p>
+                    <p>Website: <span id="previewWebsite"></span></p>
+                    <p>Number: <span id="previewNumber"></span></p>
+                    <p>Email: <span id="previewEmail"></span></p>
+                    <p>Address: <span id="previewAddress"></span></p>
                 </div>
-                <div class="card">
-                    Back
-                </div>
-                <!-- <div class="bottom">
-                    <button class="btn btn-outline-light">Small</button>
-                    <button class="btn btn-outline-light"> Medium </button>
-                    <button class="btn btn-outline-light">Large</button>
-                </div> -->
+               
+                <div class="card bis-card" id="card"></div>
+                
             </section>
         </div>
 
@@ -61,8 +61,9 @@
 
             <div class="card-shape-control">
                 <h3>Card Shape</h3>
-                <button class="btn btn-outline-light">Square</button>
-                <button class="btn btn-outline-light">Rounded</button>
+                <button class="btn btn-outline-light" id="rectangleBtn">Rectangle</button>
+                <button class="btn btn-outline-light" id="roundBtn">Rounded</button>
+                <button class="btn btn-outline-light" id="leafBtn">Leaf</button>
             </div>
             <div class="control-section mb-3">
                 <h3>Upload Logo</h3>
@@ -73,10 +74,10 @@
         <!-- Right -->
         <div class="column">
             <h4>Make Your Card Uniquely Yours!</h4>
-            <form>
+            <form id="userForm">
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <input type="text" id="name" placeholder="Full Name">
+                        <input class="form-control" type="text" id="name" placeholder="Full Name">
                     </div>
 
                     <div class="col-md-3">
@@ -105,7 +106,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" id="title" placeholder="Title" aria-label="title">
+                        <input class="form-control" type="text" id="title" placeholder="Title" aria-label="title">
                     </div>
 
                     <div class="col-md-3">
@@ -134,7 +135,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" id="website" placeholder="Website" aria-label="website">
+                        <input class="form-control" type="text" id="website" placeholder="Website" aria-label="website">
                     </div>
 
                     <div class="col-md-3">
@@ -163,36 +164,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" id="number" placeholder="Phone Number" aria-label="Number">
-                    </div>
-
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Font</option>
-                            <option value="1">Times New Roman</option>
-                            <option value="2">Georgia</option>
-                            <option value="3">Garamond</option>
-                            <option value="4">Arial</option>
-                            <option value="5">Verdana</option>
-                            <option value="6">Helvetica</option>
-                            <option value="7">Courier New</option>
-                            <option value="8">Lucida Console</option>
-                            <option value="9">Monaco</option>
-                        </select>
-                    </div>
-                
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
-                        </select>
-                    </div> 
-
-                    <div class="col-md-6">
-                        <input type="text" id="email" placeholder="Email" aria-label="Email">
+                        <input class="form-control" type="text" id="number" placeholder="Phone Number" aria-label="Number">
                     </div>
 
                     <div class="col-md-3">
@@ -221,7 +193,36 @@
                     </div> 
 
                     <div class="col-md-6">
-                        <input type="text" id="address" placeholder="Address" aria-label="Address">
+                        <input class="form-control" type="text" id="email" placeholder="Email" aria-label="Email">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Font</option>
+                            <option value="1">Times New Roman</option>
+                            <option value="2">Georgia</option>
+                            <option value="3">Garamond</option>
+                            <option value="4">Arial</option>
+                            <option value="5">Verdana</option>
+                            <option value="6">Helvetica</option>
+                            <option value="7">Courier New</option>
+                            <option value="8">Lucida Console</option>
+                            <option value="9">Monaco</option>
+                        </select>
+                    </div>
+                
+                    <div class="col-md-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Size</option>
+                            <option value="10">Small</option>
+                            <option value="11">Medium</option>
+                            <option value="12">Large</option>
+                            <option value="13">X-Large</option>
+                        </select>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <input class="form-control" type="text" id="address" placeholder="Address" aria-label="Address">
                     </div>
 
                     <div class="col-md-3">
@@ -249,17 +250,31 @@
                         </select>
                     </div>
                 </div> <!-- end row -->
-                <button id="historyBtn">History</button>
-                <button id="saveBtn">Save</button>
+
+                <div class="button-group">
+                    <button id="historyBtn" class="btn btn-outline-light">History</button>
+                    <button id="saveBtn" class="btn btn-outline-light">Save</button>
+                </div>
             </form>
-            <div class="button-group">
-                <button class="btn btn-secondary">History</button>
-                <button class="btn btn-primary">Save</button>
-            </div>
         </div>
     </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Saved Data</h2>
+            <p><strong>Name:</strong> <span id="modalUsername"></span></p>
+            <p><strong>Title:</strong> <span id="modalTitle"></span></p>
+            <p><strong>Website:</strong> <span id="modalWebsite"></span></p>
+            <p><strong>Number:</strong> <span id="modalNumber"></span></p>
+            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+            <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+        </div>
+    </div>
+
     <script src="java.js"></script>
 </body>
+
 <footer style="text-align: center;">
     <h1>Fill in later</h1>
 </footer>
