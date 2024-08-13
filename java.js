@@ -59,16 +59,16 @@ historyBtnInput.addEventListener('click', function (event) {
     if (display) {
         const usersInput = JSON.parse(display);
 
-        const popupContent = `
+        const popupContent = 
             <p><strong>Username:</strong> ${usersInput.name}</p>
             <p><strong>Title:</strong> ${usersInput.title}</p>
             <p><strong>Website:</strong> ${usersInput.website}</p>
             <p><strong>Number:</strong> ${usersInput.number}</p>
             <p><strong>Email:</strong> ${usersInput.email}</p>
             <p><strong>Address:</strong> ${usersInput.address}</p>
-        `;
+        ;
         const popupWindow = window.open("", "Popup", "width=400,height=300");
-        popupWindow.document.write(`<html><head><title>History</title></head><body>${popupContent}</body></html>`);
+        popupWindow.document.write(<html><head><title>History</title></head><body>${popupContent}</body></html>);
     } else {
         alert ('No History')
     }
