@@ -50,13 +50,15 @@ main {
 
 
 /* LEFT COLUMN */
-.card {
+.bis-card {
   width: 100%;
   padding: 120px 250px;
-  box-sizing: rectangle;
   text-align: center;
   margin-top: 25px;
+  background-color: rgb(255, 255, 255);
 }
+
+
 
 
 .left {
