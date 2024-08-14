@@ -142,3 +142,22 @@ leafBtn.addEventListener('click', function() {
     backCard.style.borderBottomLeftRadius = '20%';
 });
  
+// Using the addEventListener, we styled the font showing in the preview is changed when a different value is inputted
+font.addEventListener('click', function (event) {
+    prevName.style.fontFamily = font.value
+});
+tfont.addEventListener('click', function (event) {
+    prevTitle.style.fontFamily = tfont.value
+});
+wfont.addEventListener('click', function (event) {
+    prevWeb.style.fontFamily = wfont.value
+});
+nfont.addEventListener('click', function (event) {
+    prevNum.style.fontFamily = nfont.value
+});
+efont.addEventListener('click', function (event) {
+    prevEm.style.fontFamily = efont.value
+});
+afont.addEventListener('click', function (event) {
+    prevAdd.style.fontFamily = afont.value
+});
