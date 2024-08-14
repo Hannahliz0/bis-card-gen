@@ -1,7 +1,7 @@
 // Takes the ids from user input from the forms of name, title, website, number, email, address
 const nameInput = document.querySelector('#name');
 const titleInput = document.querySelector('#title');
-const websiteInput = document.querySelector('#website');
+// const websiteInput = document.querySelector('#website');
 const numberInput = document.querySelector('#number');
 const emailInput = document.querySelector('#email');
 const addressInput = document.querySelector('#address');
@@ -23,7 +23,7 @@ const control = document.querySelector('#control-section');
 // Takes the ids from the font options 
 const font = document.querySelector('#name-font');
 const tfont = document.querySelector('#title-font');
-const wfont = document.querySelector('#website-font');
+// const wfont = document.querySelector('#website-font');
 const nfont = document.querySelector('#num-font');
 const efont = document.querySelector('#email-font');
 const afont = document.querySelector('#add-font');
@@ -31,10 +31,17 @@ const afont = document.querySelector('#add-font');
 // Takes the ids from the bis card span elements
 const prevName = document.querySelector('#previewName');
 const prevTitle = document.querySelector('#previewTitle');
-const prevWeb = document.querySelector('#previewWebsite');
+// const prevWeb = document.querySelector('#previewWebsite');
 const prevNum = document.querySelector('#previewNumber');
 const prevEm = document.querySelector('#previewEmail');
 const prevAdd = document.querySelector('#previewAddress');
+
+// Takes the ids from the size options 
+const namesize = document.querySelector('#nameSize');
+const titleSize = document.querySelector('#titleSize');
+const numSize = document.querySelector('#numSize');
+const emailSize = document.querySelector('#emailSize');
+const addSize = document.querySelector('#addSize');
 
 // When the save button is pressed, collect the inputted data and store it into a local storage
 saveBtnInput.addEventListener('click', function (event) {
@@ -44,7 +51,7 @@ saveBtnInput.addEventListener('click', function (event) {
   const userInput = {
     name: nameInput.value,
     title: titleInput.value,
-    website: websiteInput.value,
+    // website: websiteInput.value,
     number: numberInput.value,
     email: emailInput.value,
     address: addressInput.value,
@@ -69,7 +76,7 @@ historyBtnInput.addEventListener('click', function (event) {
 
     document.getElementById('modalTitle').textContent = userObject.title;
 
-    document.getElementById('modalWebsite').textContent = userObject.website;
+    // document.getElementById('modalWebsite').textContent = userObject.website;
 
     document.getElementById('modalNumber').textContent = userObject.number;
 
@@ -105,9 +112,9 @@ titleInput.addEventListener('input', function() {
     document.getElementById('previewTitle').textContent = this.value
 });
 
-websiteInput.addEventListener('input', function() {
-    document.getElementById('previewWebsite').textContent = this.value
-});
+// websiteInput.addEventListener('input', function() {
+//     document.getElementById('previewWebsite').textContent = this.value
+// });
 
 numberInput.addEventListener('input', function() {
     document.getElementById('previewNumber').textContent = this.value
@@ -141,4 +148,56 @@ leafBtn.addEventListener('click', function() {
     backCard.style.borderTopRightRadius = '20%';
     backCard.style.borderBottomLeftRadius = '20%';
 });
+
+cardColor.addEventListener('input', function() {
+    frontCard.style.backgroundColor = this.value;
+    backCard.style.backgroundColor = this.value;
+});
+
+fontColor.addEventListener('input', function() {
+    prevName.style.color = this.value;
+    prevTitle.style.color = this.value;
+    prevNum.style.color = this.value;
+    prevEm.style.color = this.value;
+    prevAdd.style.color = this.value;
+});
  
+// Using the addEventListener, we styled the font showing in the preview is changed when a different value is inputted
+font.addEventListener('click', function (event) {
+    prevName.style.fontFamily = font.value
+});
+tfont.addEventListener('click', function (event) {
+    prevTitle.style.fontFamily = tfont.value
+});
+// wfont.addEventListener('click', function (event) {
+//     prevWeb.style.fontFamily = wfont.value
+// });
+nfont.addEventListener('click', function (event) {
+    prevNum.style.fontFamily = nfont.value
+});
+efont.addEventListener('click', function (event) {
+    prevEm.style.fontFamily = efont.value
+});
+afont.addEventListener('click', function (event) {
+    prevAdd.style.fontFamily = afont.value
+});
+
+namesize.addEventListener('click', function (event) {
+    prevName.style.fontSize = namesize.value
+});
+
+titleSize.addEventListener('click', function (event) {
+    prevTitle.style.fontSize = titleSize.value
+});
+
+numSize.addEventListener('click', function (event) {
+    prevNum.style.fontSize = numSize.value
+});
+
+emailSize.addEventListener('click', function (event) {
+    prevEm.style.fontSize = emailSize.value
+});
+
+addSize.addEventListener('click', function (event) {
+    prevAdd.style.fontSize = addSize.value
+});
