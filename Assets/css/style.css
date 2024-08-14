@@ -143,11 +143,8 @@ input .btn {
 
 /* RIGHT COLUMN */
 input[type="text"] {
-  background-color: rgba(126, 126, 126, 0);
-  font-family: monospace;
-  color: black;
-  text-align: center;
-  border-radius: none;
+  text-align: left;
+  
 } 
 
 .column h4 {
@@ -159,12 +156,7 @@ input[type="text"] {
   font-family: monospace;
 }
 
-div input[type="text"] {
-  background-color: rgba(126, 126, 126, 0);
-  font-family: monospace;
-  border: none;
-  padding-right: -20px;
-}
+
 
 div select option[value="1"] {
   font-family: 'Times New Roman', Times, serif;
@@ -227,7 +219,7 @@ div select option[value="13"] {
   justify-content:end;
   margin-top: 20px;
 }
-/* END OF RIGHT COLUMN */
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; 
@@ -259,7 +251,7 @@ div select option[value="13"] {
   text-decoration: none;
   cursor: pointer;
 }
-
+/* END OF RIGHT COLUMN */
 
 input[type="color"] {
   width: 80%;
@@ -275,4 +267,5 @@ footer h4 {
   color: white;
 }
 
+input 
 
