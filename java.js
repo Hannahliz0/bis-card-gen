@@ -11,6 +11,7 @@ const rectangleBtn = document.querySelector('#rectangleBtn');
 const leafBtn = document.querySelector('#leafBtn');
 const frontCard = document.querySelector('#frontCard');
 const backCard = document.querySelector('#backCard');
+const dlBtn = document.querySelector('#dlBtn');
 
 saveBtnInput.addEventListener('click', function (event) {
   event.preventDefault();
@@ -114,3 +115,4 @@ leafBtn.addEventListener('click', function() {
     backCard.style.borderTopRightRadius = '20%';
     backCard.style.borderBottomLeftRadius = '20%';
 });
+ 
