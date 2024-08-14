@@ -4,6 +4,7 @@ header {
   text-align: right;
   padding-right: 5%;
   padding-top: 10px;
+  border-bottom: black 1px solid;
 }
 
 header div h4 {
@@ -43,6 +44,7 @@ body {
 }
 
 main {
+  border-top: black 1px dashed;
   display: flex;
   width: 100%;
   flex: 1;
