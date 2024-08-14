@@ -11,7 +11,9 @@ const rectangleBtn = document.querySelector('#rectangleBtn');
 const leafBtn = document.querySelector('#leafBtn');
 const frontCard = document.querySelector('#frontCard');
 const backCard = document.querySelector('#backCard');
-const dlBtn = document.querySelector('#dlBtn');
+const cardColor = document.querySelector('#card-color-picker');
+const fontColor = document.querySelector('#font-color-picker');
+const control = document.querySelector('#control-section');
 
 saveBtnInput.addEventListener('click', function (event) {
   event.preventDefault();
@@ -93,8 +95,6 @@ addressInput.addEventListener('input', function() {
     document.getElementById('previewAddress').textContent = this.value
 });
 
-
-
 roundBtn.addEventListener('click', function() {
     frontCard.style.borderRadius = '20%';
     backCard.style.borderRadius = '20%';
@@ -115,4 +115,11 @@ leafBtn.addEventListener('click', function() {
     backCard.style.borderTopRightRadius = '20%';
     backCard.style.borderBottomLeftRadius = '20%';
 });
- 
+
+control.addEventListener('input', function() {
+    alert('worked')
+    frontCard.style.backgroundColor = cardColor.value;
+    backCard.style.backgroundColor = cardColor.value;
+    frontCard.style.color = fontColor.value;
+    backCard.style.color = fontColor.value;
+});
