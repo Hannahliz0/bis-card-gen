@@ -4,12 +4,14 @@ header {
   text-align: right;
   padding-right: 5%;
   padding-top: 10px;
+  border-bottom: black 1px solid;
 }
 
 header div h4 {
-  font-family: monospace;
   font-weight: bold;
 }
+
+
 
 header .container {
   display: flex;
@@ -42,6 +44,7 @@ body {
 }
 
 main {
+  border-top: black 1px dashed;
   display: flex;
   width: 100%;
   flex: 1;
@@ -51,13 +54,50 @@ main {
 
 /* LEFT COLUMN */
 .bis-card {
-  width: 100%;
+  width: 300px;
+  height: 100px;
+  position: relative;
+  border: black 1px solid;
   padding: 120px 250px;
-  text-align: center;
+  font-size: 15px;
   margin-top: 25px;
   background-color: rgb(255, 255, 255);
 }
 
+.bis-card p {
+  position: absolute;
+  margin: 0;
+}
+
+.nam {
+  top: 0;
+  left: 200px;
+}
+
+.tim {
+  top: 20px;
+  left: 200px;
+}
+
+.web {
+  bottom: 0;
+  left: 225px;
+}
+
+.num {
+  bottom: 25px;
+  left: 50px;
+}
+
+.em {
+  bottom: 10px;
+  left: 50px;
+}
+
+.add {
+  bottom: 25px;
+  right: 50px;
+}
 
 .left {
   padding: 10px;
@@ -143,11 +183,8 @@ input .btn {
 
 /* RIGHT COLUMN */
 input[type="text"] {
-  background-color: rgba(126, 126, 126, 0);
-  font-family: monospace;
-  color: black;
-  text-align: center;
-  border-radius: none;
+  text-align: left;
+  
 } 
 
 .column h4 {
@@ -159,75 +196,12 @@ input[type="text"] {
   font-family: monospace;
 }
 
-div input[type="text"] {
-  background-color: rgba(126, 126, 126, 0);
-  font-family: monospace;
-  border: none;
-  padding-right: -20px;
-}
-
-div select option[value="1"] {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-div select option[value="2"] {
-  font-family: 'georgia', serif;
-}
-
-div select option[value="3"] {
-  font-family: 'garmond', serif;
-}
-
-div select option[value="4"] {
-  font-family: 'Arial', sans-serif;
-}
-
-div select option[value="5"] {
-  font-family: 'verdana', sans-serif;
-}
-
-div select option[value="6"] {
-  font-family: 'helvetica', sans-serif;
-}
-
-div select option[value="7"] {
-  font-family: 'Courier New', monospace;
-}
-
-div select option[value="8"] {
-  font-family: 'luceida console', monospace;
-}
-
-div select option[value="9"] {
-  font-family: 'Monaco', monospace;
-}
-
-div select option[value="10"] {
-  font-family: monospace;
-  font-size: small;
-}
-
-div select option[value="11"] {
-  font-family: monospace;
-  font-size: medium;
-}
-
-div select option[value="12"] {
-  font-family: monospace;
-  font-size: large;
-}
-
-div select option[value="13"] {
-  font-family: monospace;
-  font-size: x-large;
-}
-
 .button-group {
   display: flex;
   justify-content:end;
   margin-top: 20px;
 }
-/* END OF RIGHT COLUMN */
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; 
@@ -259,7 +233,7 @@ div select option[value="13"] {
   text-decoration: none;
   cursor: pointer;
 }
-
+/* END OF RIGHT COLUMN */
 
 input[type="color"] {
   width: 80%;
@@ -274,5 +248,3 @@ footer h4 {
   font-family: monospace;
   color: white;
 }
-
-

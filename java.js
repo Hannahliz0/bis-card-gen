@@ -1,22 +1,46 @@
+// Takes the ids from user input from the forms of name, title, website, number, email, address
 const nameInput = document.querySelector('#name');
 const titleInput = document.querySelector('#title');
 const websiteInput = document.querySelector('#website');
 const numberInput = document.querySelector('#number');
 const emailInput = document.querySelector('#email');
 const addressInput = document.querySelector('#address');
+
+// Takes the ids from the save and history buttons
 const saveBtnInput = document.querySelector('#saveBtn');
 const historyBtnInput = document.querySelector('#historyBtn');
+
+// Takes the ids from the different card displays
 const roundBtn = document.querySelector('#roundBtn');
 const rectangleBtn = document.querySelector('#rectangleBtn');
 const leafBtn = document.querySelector('#leafBtn');
 const frontCard = document.querySelector('#frontCard');
 const backCard = document.querySelector('#backCard');
-const dlBtn = document.querySelector('#dlBtn');
+const cardColor = document.querySelector('#card-color-picker');
+const fontColor = document.querySelector('#font-color-picker');
+const control = document.querySelector('#control-section');
 
+// Takes the ids from the font options 
+const font = document.querySelector('#name-font');
+const tfont = document.querySelector('#title-font');
+const wfont = document.querySelector('#website-font');
+const nfont = document.querySelector('#num-font');
+const efont = document.querySelector('#email-font');
+const afont = document.querySelector('#add-font');
+
+// Takes the ids from the bis card span elements
+const prevName = document.querySelector('#previewName');
+const prevTitle = document.querySelector('#previewTitle');
+const prevWeb = document.querySelector('#previewWebsite');
+const prevNum = document.querySelector('#previewNumber');
+const prevEm = document.querySelector('#previewEmail');
+const prevAdd = document.querySelector('#previewAddress');
+
+// When the save button is pressed, collect the inputted data and store it into a local storage
 saveBtnInput.addEventListener('click', function (event) {
   event.preventDefault();
 
-  // TODO: Create user object from submission
+  // Created a user object of the users input
   const userInput = {
     name: nameInput.value,
     title: titleInput.value,
@@ -26,42 +50,45 @@ saveBtnInput.addEventListener('click', function (event) {
     address: addressInput.value,
   };
 
-  // TODO: Set new submission to local storage
+  // Created a local storage
   localStorage.setItem('userInput', JSON.stringify(userInput));
 
-  alert('worked')
+  location.reload();
 });
 
+//When the button titled "history" is clicked, a modal is populated with set information
 historyBtnInput.addEventListener('click', function (event) {
     event.preventDefault();
 
-    const username = nameInput.value;
-    document.getElementById('modalUsername').textContent = username;
+    // Pulled the saved input from object userInput, convert it into a JSON string and access the values of the object
+    const userJson = localStorage.getItem('userInput');
+    const userObject = JSON.parse(userJson)
 
-    const modTitle = titleInput.value
-    document.getElementById('modalTitle').textContent = modTitle;
+    //Adds text to the different span ids and changes the specific value within the object userInput 
+    document.getElementById('modalUsername').textContent = userObject.name;
 
-    const modWebsite = websiteInput.value
-    document.getElementById('modalWebsite').textContent = modWebsite;
+    document.getElementById('modalTitle').textContent = userObject.title;
 
-    const modNum = numberInput.value
-    document.getElementById('modalNumber').textContent = modNum;
+    document.getElementById('modalWebsite').textContent = userObject.website;
 
-    const modEmail = emailInput.value
-    document.getElementById('modalEmail').textContent = modEmail;
+    document.getElementById('modalNumber').textContent = userObject.number;
 
-    const modAddress = addressInput.value
-    document.getElementById('modalAddress').textContent = modAddress;
+    document.getElementById('modalEmail').textContent = userObject.email;
 
+    document.getElementById('modalAddress').textContent = userObject.address;
+
+    //Displays the div with id "myModal" that is currently display = none 
     const modal = document.getElementById('myModal');
     modal.style.display = "block";
 })
 
+// If the element with the id of "close" is clicked the display will close
 document.querySelector('.close').addEventListener('click', function() {
     const modal = document.getElementById('myModal');
     modal.style.display = "none";
 });
 
+// If anything other than the modal is selected the display will close
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('myModal');
     if (event.target === modal) {
@@ -69,6 +96,7 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// Using the addEventListener, passing text through the set id, whenever an input is coming in
 nameInput.addEventListener('input', function() {
     document.getElementById('previewName').textContent = this.value
 });
@@ -93,8 +121,6 @@ addressInput.addEventListener('input', function() {
     document.getElementById('previewAddress').textContent = this.value
 });
 
-
-
 roundBtn.addEventListener('click', function() {
     frontCard.style.borderRadius = '20%';
     backCard.style.borderRadius = '20%';
@@ -116,3 +142,21 @@ leafBtn.addEventListener('click', function() {
     backCard.style.borderBottomLeftRadius = '20%';
 });
  
+font.addEventListener('click', function (event) {
+    prevName.style.fontFamily = font.value
+});
+tfont.addEventListener('click', function (event) {
+    prevTitle.style.fontFamily = tfont.value
+});
+wfont.addEventListener('click', function (event) {
+    prevWeb.style.fontFamily = wfont.value
+});
+nfont.addEventListener('click', function (event) {
+    prevNum.style.fontFamily = nfont.value
+});
+efont.addEventListener('click', function (event) {
+    prevEm.style.fontFamily = efont.value
+});
+afont.addEventListener('click', function (event) {
+    prevAdd.style.fontFamily = afont.value
+});
