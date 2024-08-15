@@ -35,6 +35,7 @@ const prevTitle = document.querySelector('#previewTitle');
 const prevNum = document.querySelector('#previewNumber');
 const prevEm = document.querySelector('#previewEmail');
 const prevAdd = document.querySelector('#previewAddress');
+const logoImage = document.querySelector('#logoImage');
 
 // Takes the ids from the size options 
 const namesize = document.querySelector('#nameSize');
@@ -129,8 +130,8 @@ addressInput.addEventListener('input', function() {
 });
 
 roundBtn.addEventListener('click', function() {
-    frontCard.style.borderRadius = '20%';
-    backCard.style.borderRadius = '20%';
+    frontCard.style.borderRadius = '15px';
+    backCard.style.borderRadius = '15px';
 });
 
 rectangleBtn.addEventListener('click', function() {
@@ -141,12 +142,12 @@ rectangleBtn.addEventListener('click', function() {
 leafBtn.addEventListener('click', function() {
     frontCard.style.borderTopLeftRadius = '0%';
     frontCard.style.borderBottomRightRadius = '0%';
-    frontCard.style.borderTopRightRadius = '20%';
-    frontCard.style.borderBottomLeftRadius = '20%';
+    frontCard.style.borderTopRightRadius = '15px';
+    frontCard.style.borderBottomLeftRadius = '15px';
     backCard.style.borderTopLeftRadius = '0%';
     backCard.style.borderBottomRightRadius = '0%';
-    backCard.style.borderTopRightRadius = '20%';
-    backCard.style.borderBottomLeftRadius = '20%';
+    backCard.style.borderTopRightRadius = '15px';
+    backCard.style.borderBottomLeftRadius = '15px';
 });
 
 cardColor.addEventListener('input', function() {
@@ -217,10 +218,11 @@ logoUpload.addEventListener('change', function() {
 
         // When the file is read, set the background image of the back card
         reader.onload = function(e) {
+
             backCard.style.backgroundImage = `url(${e.target.result})`;
-            backCard.style.backgroundSize = 'cover';  // Ensure the image covers the entire card
+            backCard.style.backgroundSize = '280px';  // Ensure the image covers the entire card
             backCard.style.backgroundPosition = 'center';  // Center the image
-            backCard.style.backgroundRepeat = 'no-repeat';  // Prevent image from repeating
+            backCard.style.backgroundRepeat = 'no-repeat';  // Prevent image from repeating 
         };
 
         reader.readAsDataURL(file); // Read the image file as a data URL
