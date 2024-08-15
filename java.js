@@ -148,4 +148,56 @@ leafBtn.addEventListener('click', function() {
     backCard.style.borderTopRightRadius = '20%';
     backCard.style.borderBottomLeftRadius = '20%';
 });
+
+cardColor.addEventListener('input', function() {
+    frontCard.style.backgroundColor = this.value;
+    backCard.style.backgroundColor = this.value;
+});
+
+fontColor.addEventListener('input', function() {
+    prevName.style.color = this.value;
+    prevTitle.style.color = this.value;
+    prevNum.style.color = this.value;
+    prevEm.style.color = this.value;
+    prevAdd.style.color = this.value;
+});
  
+// Using the addEventListener, we styled the font showing in the preview is changed when a different value is inputted
+font.addEventListener('click', function (event) {
+    prevName.style.fontFamily = font.value
+});
+tfont.addEventListener('click', function (event) {
+    prevTitle.style.fontFamily = tfont.value
+});
+// wfont.addEventListener('click', function (event) {
+//     prevWeb.style.fontFamily = wfont.value
+// });
+nfont.addEventListener('click', function (event) {
+    prevNum.style.fontFamily = nfont.value
+});
+efont.addEventListener('click', function (event) {
+    prevEm.style.fontFamily = efont.value
+});
+afont.addEventListener('click', function (event) {
+    prevAdd.style.fontFamily = afont.value
+});
+
+namesize.addEventListener('click', function (event) {
+    prevName.style.fontSize = namesize.value
+});
+
+titleSize.addEventListener('click', function (event) {
+    prevTitle.style.fontSize = titleSize.value
+});
+
+numSize.addEventListener('click', function (event) {
+    prevNum.style.fontSize = numSize.value
+});
+
+emailSize.addEventListener('click', function (event) {
+    prevEm.style.fontSize = emailSize.value
+});
+
+addSize.addEventListener('click', function (event) {
+    prevAdd.style.fontSize = addSize.value
+});
