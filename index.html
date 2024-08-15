@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,223 +9,248 @@
 
     <link rel="stylesheet" href="/Assets/css/style.css" />
     <link rel="stylesheet" href="/Assets/bootstrap/css/bootstrap.css" />
- <head>
-
+    <style>
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
 
 <header>
     <div class="flexbox">
-     <logo> 
+        <logo>
             <img src="/Assets/images/CardHub-black.png" alt="logo" />
-     </logo>
-
-     <h4> Business Card Generator</h4>
+        </logo>
+        <h4>Business Card Generator</h4>
     </div>
-
 </header>
 
 <body>
     <main>
-        <div class="column">
-            <container>
-                <row>Preview</row>
-            </container>
+        <!-- Left -->
+        <div class="left">
+            <section>
+                <h4 id="prev">Preview</h4>
+                <!-- class to generate the card -->
+                <div class="bis-card" id="frontCard">
+                    <p class="nam" id="previewName"><span ></span></p>
+                    <p class="tim" id="previewTitle"><span></span></p>
+                    <!-- <p class="web"><span id="previewWebsite"></span>adad</p> -->
+                    <div class="logo-card" id="previewWebsite"></div>
+                    <p class="num" id="previewNumber"><span></span></p>
+                    <p class="em" id="previewEmail"><span></span></p>
+                    <p class="add" id="previewAddress"><span></span></p>
+                </div>
+               
+                <div class="bis-card" id="backCard">
+               
+                </div>
+            </section>
         </div>
 
-
-        <div class="column">
-            <container>
-                <row>design</row>
-            </container>
+        <!-- Middle -->
+        <div class="column middle-column">
+            <!-- Changes the font color -->
+            <div class="control-section mb-3">
+                <h3>Font Color</h3>
+                <input id="font-color-picker" type="color">
+            </div>
+            <!-- Changes the color of the card -->
+            <div class="control-section mb-3">
+                <h3>Card Color</h3>
+                <input id="card-color-picker" type="color">
+            </div>
+            <!-- Controls the shape of the card -->
+            <div class="card-shape-control">
+                <h3>Card Shape</h3>
+                <button class="btn btn-outline-light" id="rectangleBtn">Rectangle</button>
+                <button class="btn btn-outline-light" id="roundBtn">Rounded</button>
+                <button class="btn btn-outline-light" id="leafBtn">Leaf</button>
+            </div>
+            <!-- Controls the image loading -->
+            <div class="control-section mb-3">
+                <label for="logo-upload" class="btn btn-outline-light">Upload Logo</label>
+                <input type="file" id="logo-upload" style="visibility: hidden;" accept="image/*">
+            </div>
         </div>
-
-      
+  
+        <!-- Right -->
         <div class="column">
-            <h4> Make Your Card Uniquely Yours!</h4>
-            <form>
-                    
+            <h4>Make Your Card Uniquely Yours!</h4>
+            <form id="userForm">
                 <div class="row g-3">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Full Name">
+                    <div class="col-md-5">
+                        <input class="form-control" type="text" id="name" placeholder="Full Name" maxlength="20">
                     </div>
 
                     <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                        <option selected>Font</option>
-                        <option value="1">Times New Roman</option>
-                        <option value="2">Georgia</option>
-                        <option value="3">Garamond</option>
-                        <option value="4">Arial</option>
-                        <option value="5">Verdana</option>
-                        <option value="6">Helvetica</option>
-                        <option value="7">Courier New</option>
-                        <option value="8">Lucida Console</option>
-                        <option value="9">Monaco</option>
-                        </select>
-                    </div>
-                
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
-                        </select>
-                    </div>
-
-
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Title" aria-label="title">
-                    </div>
-
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                        <option selected>Font</option>
-                        <option value="1">Times New Roman</option>
-                        <option value="2">Georgia</option>
-                        <option value="3">Garamond</option>
-                        <option value="4">Arial</option>
-                        <option value="5">Verdana</option>
-                        <option value="6">Helvetica</option>
-                        <option value="7">Courier New</option>
-                        <option value="8">Lucida Console</option>
-                        <option value="9">Monaco</option>
-                        </select>
-                    </div>
-                
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
-                        </select>
-                    </div>
-
-
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Website" aria-label="website">
-                    </div>
-
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                        <option selected>Font</option>
-                        <option value="1">Times New Roman</option>
-                        <option value="2">Georgia</option>
-                        <option value="3">Garamond</option>
-                        <option value="4">Arial</option>
-                        <option value="5">Verdana</option>
-                        <option value="6">Helvetica</option>
-                        <option value="7">Courier New</option>
-                        <option value="8">Lucida Console</option>
-                        <option value="9">Monaco</option>
-                        </select>
-                    </div>
-                
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Phone Number" aria-label="Number">
-                    </div>
-
-                    <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="name-font" class="form-select" aria-label="Default select example">
                             <option selected>Font</option>
-                            <option value="1">Times New Roman</option>
-                            <option value="2">Georgia</option>
-                            <option value="3">Garamond</option>
-                            <option value="4">Arial</option>
-                            <option value="5">Verdana</option>
-                            <option value="6">Helvetica</option>
-                            <option value="7">Courier New</option>
-                            <option value="8">Lucida Console</option>
-                            <option value="9">Monaco</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Franklin Gothic Medium">Garamond</option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Monaco">Monaco</option>
                         </select>
                     </div>
                 
                     <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="nameSize" class="form-select" aria-label="Default select example">
                             <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
+                            <option value="12px">Small</option>
+                            <option value="14px">Medium</option>
+                            <option value="16px">Large</option>
+                            <option value="18px">X-Large</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-5">
+                        <input class="form-control" type="text" id="title" placeholder="Title" aria-label="title" maxlength="20">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select id="title-font" class="form-select" aria-label="Default select example">
+                            <option selected>Font</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Monaco">Monaco</option>
+                        </select>
+                    </div>
+                
+                    <div class="col-md-3">
+                        <select id="titleSize"class="form-select" aria-label="Default select example">
+                            <option selected>Size</option>
+                            <option value="12px">Small</option>
+                            <option value="14px">Medium</option>
+                            <option value="16px">Large</option>
+                            <option value="18px">X-Large</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-5">
+                        <input class="form-control" type="text" id="number" placeholder="Phone Number" aria-label="Number" maxlength="15">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select id="num-font" class="form-select" aria-label="Default select example">
+                            <option selected>Font</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Monaco">Monaco</option>
+                        </select>
+                    </div>
+                
+                    <div class="col-md-3">
+                        <select id="numSize" class="form-select" aria-label="Default select example">
+                            <option selected>Size</option>
+                            <option value="12px">Small</option>
+                            <option value="14px">Medium</option>
+                            <option value="16px">Large</option>
+                            <option value="18px">X-Large</option>
                         </select>
                     </div> 
 
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                    <div class="col-md-5">
+                        <input class="form-control" type="text" id="email" placeholder="Email" aria-label="Email" maxlength="20">
                     </div>
 
                     <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="email-font" class="form-select" aria-label="Default select example">
                             <option selected>Font</option>
-                            <option value="1">Times New Roman</option>
-                            <option value="2">Georgia</option>
-                            <option value="3">Garamond</option>
-                            <option value="4">Arial</option>
-                            <option value="5">Verdana</option>
-                            <option value="6">Helvetica</option>
-                            <option value="7">Courier New</option>
-                            <option value="8">Lucida Console</option>
-                            <option value="9">Monaco</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Monaco">Monaco</option>
                         </select>
                     </div>
                 
                     <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="emailSize" class="form-select" aria-label="Default select example">
                             <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
+                            <option value="12px">Small</option>
+                            <option value="14px">Medium</option>
+                            <option value="16px">Large</option>
+                            <option value="18px">X-Large</option>
                         </select>
                     </div> 
 
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Address" aria-label="Address">
+                    <div class="col-md-5">
+                        <input class="form-control" type="text" id="address" placeholder="Address" aria-label="Address" maxlength="25">
                     </div>
 
                     <div class="col-md-3">
-                        <select class="form-select" aria-label="font">
+                        <select id="add-font" class="form-select" aria-label="font">
                             <option selected>Font</option>
-                            <option value="1">Times New Roman</option>
-                            <option value="2">Georgia</option>
-                            <option value="3">Garamond</option>
-                            <option value="4">Arial</option>
-                            <option value="5">Verdana</option>
-                            <option value="6">Helvetica</option>
-                            <option value="7">Courier New</option>
-                            <option value="8">Lucida Console</option>
-                            <option value="9">Monaco</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Monaco">Monaco</option>
                         </select>
                     </div>
                 
                     <div class="col-md-3">
-                        <select class="form-select" aria-label="size">
+                        <select id="addSize" class="form-select" aria-label="size">
                             <option selected>Size</option>
-                            <option value="10">Small</option>
-                            <option value="11">Medium</option>
-                            <option value="12">Large</option>
-                            <option value="13">X-Large</option>
+                            <option value="12px">Small</option>
+                            <option value="14px">Medium</option>
+                            <option value="16px">Large</option>
+                            <option value="18px">X-Large</option>
                         </select>
-                    </div> 
+                    </div>
+                </div> <!-- end row -->
 
-                </div>  <!-- end row-->
+                <div class="button-group">
+                    <button id="historyBtn" class="btn btn-outline-light">History</button>
+                    <button id="saveBtn" class="btn btn-outline-light">Save</button>
+                    <button id="dlBtn" class="btn btn-outline-light">Download</button>
+                </div>
             </form>
-        </div><!-- end column-->        
+        </div>
     </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Saved Data</h2>
+            <p><strong>Name:</strong> <span id="modalUsername"></span></p>
+            <p><strong>Title:</strong> <span id="modalTitle"></span></p>
+            <p><strong>Number:</strong> <span id="modalNumber"></span></p>
+            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+            <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+        </div>
+    </div>
+    <script src="java.js"></script>
 </body>
 
-<footer>
-    
+<footer style="text-align: center;">
+    <h4>Made By: Amauri Brown, Amar Patel, and Hannah Schmidt</h4>
 </footer>
+</html>
