@@ -182,7 +182,9 @@ afont.addEventListener('click', function (event) {
     prevAdd.style.fontFamily = afont.value
 });
 
-namesize.addEventListener('click', function (event) {
+
+
+namesize.addEventListener('change', function (event) {
     prevName.style.fontSize = namesize.value
 });
 
