@@ -64,6 +64,16 @@ main {
   background-color: rgb(255, 255, 255);
 }
 
+.logo-card {
+  margin: 0;
+  width: 150px;
+  height: 100px;
+  cursor: move;
+  position: absolute;
+  top: 60px;
+  background-color: rgb(3, 3, 3);
+}
+
 .bis-card p {
   position: absolute;
   margin: 0;
@@ -72,32 +82,43 @@ main {
 .nam {
   top: 1px;
   left: 200px;
-  
+  cursor: move;
+  user-select: none;
 }
 
 .tim {
   top: 20px;
   left: 200px;
+  cursor: move;
+  user-select: none;
 }
 
 .web {
   bottom: 0;
   left: 225px;
+  cursor: move;
+  user-select: none;
 }
 
 .num {
   bottom: 25px;
   left: 50px;
+  cursor: move;
+  user-select: none;
 }
 
 .em {
   bottom: 10px;
   left: 50px;
+  cursor: move;
+  user-select: none;
 }
 
 .add {
   bottom: 25px;
   right: 50px;
+  cursor: move;
+  user-select: none;
 }
 
 .left {
@@ -250,17 +271,26 @@ footer h4 {
   color: white;
 }
 
-.bis-card {
-  /* Adjust size as needed */
-  width: 300px;
-  height: 200px;
-  position: relative; /* Allows positioning of background image */
-  border: 1px solid #ccc; /* Optional border */
-  background-size: relative; /* Cover the entire div */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* No repeat of background image */
+@media screen and (max-width: 992px) {
+  main{
+    width: 100%;
+  }
+
+  /* Change the header color */
+  header {
+    background: #772014;
+  }
+  .bis-card {
+    display: none;
+  }
 }
 
-[type="file"] {
- 
+@media screen and (max-width: 768px) {
+  main{
+    width: 100%;
+  }
+  /* Change the header color */
+  header {
+    background: #8ac4ff;
+  }
 }
