@@ -1,5 +1,11 @@
 html, body {
-  overflow: hidden;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 header {
