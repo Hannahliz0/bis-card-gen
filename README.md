@@ -22,11 +22,15 @@
 3. Live Preview:
 - As your put input information and customize your card, a live preview will show how your business card will look. This allows you to see changes instantly and make adjustments as needed.
 
-4. Finalize and Download:
-- Once satisfied with the design, finalize your card and download it in your preferred format (JPEG,PNG, or PDF).
+
+    ![](Assets/images/CardHub.Screenshot.PNG)
+    
 
 ## Credits
 
 - Hannah Schmidt: GitHub - Hannahliz0
 - Amauri Brown: GitHub - Amauri817
 - Amar Patel: GitHub - pamar123
+
+
+  
