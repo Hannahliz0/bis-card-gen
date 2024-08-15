@@ -71,7 +71,7 @@ main {
   cursor: move;
   position: absolute;
   top: 60px;
-  background-color: rgb(3, 3, 3);
+  background-color: rgba(3, 3, 3, 0);
 }
 
 .bis-card p {
