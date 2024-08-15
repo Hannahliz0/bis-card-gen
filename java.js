@@ -201,3 +201,26 @@ emailSize.addEventListener('click', function (event) {
 addSize.addEventListener('click', function (event) {
     prevAdd.style.fontSize = addSize.value
 });
+
+// Get the logo upload input and back card elements
+const logoUpload = document.querySelector('#logo-upload');
+const backcard = document.querySelector('#backCard');
+
+// Event listener for the logo upload input
+logoUpload.addEventListener('change', function() {
+    const file = this.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+
+        // When the file is read, set the background image of the back card
+        reader.onload = function(e) {
+            backCard.style.backgroundImage = `url(${e.target.result})`;
+            backCard.style.backgroundSize = 'cover';  // Ensure the image covers the entire card
+            backCard.style.backgroundPosition = 'center';  // Center the image
+            backCard.style.backgroundRepeat = 'no-repeat';  // Prevent image from repeating
+        };
+
+        reader.readAsDataURL(file); // Read the image file as a data URL
+    }
+});

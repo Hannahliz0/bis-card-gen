@@ -248,3 +248,14 @@ footer h4 {
   font-family: monospace;
   color: white;
 }
+
+.bis-card {
+  /* Adjust size as needed */
+  width: 300px;
+  height: 200px;
+  position: relative; /* Allows positioning of background image */
+  border: 1px solid #ccc; /* Optional border */
+  background-size: relative; /* Cover the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* No repeat of background image */
+}
