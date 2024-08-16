@@ -226,8 +226,9 @@ logoUpload.addEventListener('change', function() {
             backCard.style.backgroundSize = '300px';  // Ensure the image covers the entire card
             backCard.style.backgroundPosition = 'center';  // Center the image
             backCard.style.backgroundRepeat = 'no-repeat';  // Prevent image from repeating 
+            const logos = document.getElementById('previewWebsite');
+            logos.style.display = "block";
         };
-
         reader.readAsDataURL(file); // Read the image file as a data URL
     }
 });

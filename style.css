@@ -79,8 +79,8 @@ main {
   height: 100px;
   cursor: move;
   position: absolute;
-  top: 60px;
   background-color: rgba(3, 3, 3, 0);
+  display: none;
 }
 
 .bis-card p {
